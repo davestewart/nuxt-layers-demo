@@ -6,6 +6,7 @@ const { resolve } = createResolver(import.meta.url)
 export default defineNuxtConfig({
   extends: [
     './core',
+    './site',
   ],
 
   pages: true,

@@ -1,57 +1,53 @@
 # Nuxt Layers Demo
 
-Starter template for [Alpine](https://alpine.nuxt.space).
+> Demo repo for Nuxt Layers architecture article
 
-## Clone
+## Intro
 
-Clone the repository (using `nuxi`):
+This repo accompanies my article on using Nuxt Layers to modularise sites by domain:
 
-```bash
-npx nuxi init -t themes/alpine
-```
+- [Modular site architecture with Nuxt layers](https://davestewart.co.uk/blog/nuxt-layers/)
 
-## Setup
+The repo is built off the [Alpine Theme](https://github.com/nuxt-themes/alpine), because:
 
-Install dependencies:
+1. it's a good all-round, production-ready repo
+2. it has enough sections that could be migrated to layers
+3. it had the potential for good before and after cases
 
-```bash
-pnpm install
-```
+It's designed to show how an existing site can be fairly easily refactored to Nuxt layers, gaining the benefits of a site architected by domain, rather than concern.
 
-## Development
+The article introduces the reader to layers and covers various techniques to build and get the most out of a layered site.
 
-```bash
-pnpm dev
-```
+All the techniques discussed there are employed in this demo.
 
-## Edge Side Rendering
+## Instructions
 
-Can be deployed to Vercel Functions, Netlify Functions, AWS, and most Node-compatible environments.
+The milestones in the migration will be:
 
-Look at all the available presets [here](https://v3.nuxtjs.org/guide/deploy/presets).
+- `0.1.0` – Alpine starter repo<br>
+  Local content extending external theme
+- `0.5.0` – Combined theme and content<br>
+  Local content and theme, traditional flat folder structure (by concern)
+- `1.0.0` – Manually configured base, theme and content<br>
+  Initial migration to layers (by domain, but somewhat brittle)
+- `1.1.0` – Automatically configured base, theme and content<br>
+  Implement Nuxt Layers Utils (by domain, but flexible)
 
-```bash
-pnpm build
-```
-
-## Static Generation
-
-Use the `generate` command to build your application.
-
-The HTML files will be generated in the .output/public directory and ready to be deployed to any static compatible hosting.
+Check out the repo, install and run the dev build:
 
 ```bash
-pnpm generate
+git clone https://github.com/davestewart/nuxt-layers-demo.git
+cd nuxt-layers-demo
+npm install
+npm run dev
 ```
 
-## Preview build
+Checkout individual tags to compare configurations.
 
-You might want to preview the result of your build locally, to do so, run the following command:
 
-```bash
-pnpm preview
-```
+## Feedback
 
----
+If you have any comments or questions, feel free to create an issue, or drop a [comment](http://davestwart.co.uk/blog/nuxt-layers/#hyvor-talk-view) on the original article.
 
-For a detailed explanation of how things work, check out [Alpine](https://alpine.nuxt.space).
+Cheers,<br>
+Dave

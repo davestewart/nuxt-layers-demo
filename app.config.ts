@@ -33,10 +33,18 @@ export default defineAppConfig({
         icon: 'uil:linkedin',
         label: 'LinkedIn',
         href: 'https://www.linkedin.com/company/nuxtlabs'
-      }
+      },
+      github: '',
+      facebook: '',
+      medium: '',
+      youtube: ''
     },
     form: {
       successMessage: 'Message sent. Thank you!'
+    },
+    backToTop: {
+      text: 'Back to top',
+      icon: 'material-symbols:arrow-upward'
     }
   }
 })

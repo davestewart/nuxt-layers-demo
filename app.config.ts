@@ -1,5 +1,10 @@
 // https://github.com/nuxt-themes/alpine/blob/main/nuxt.schema.ts
 export default defineAppConfig({
+  links: [
+    { _path: '/', title: 'About' },
+    { _path: '/articles', title: 'Articles' },
+    { _path: '/contact', title: 'Contact' },
+  ],
   alpine: {
     title: 'Alpine',
     description: 'The minimalist blog theme',

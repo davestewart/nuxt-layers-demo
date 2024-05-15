@@ -15,4 +15,9 @@ export default defineNuxtConfig({
       global: true
     },
   ],
+
+  dirs: {
+    // move public folder here
+    public: 'public'
+  }
 })

@@ -15,6 +15,9 @@ const envModules = {
   typography: process?.env?.THEME_DEV_TYPOGRAPHY_PATH || '@nuxt-themes/typography'
 }
 
+/**
+ * Config
+ */
 const config = defineNuxtConfig({
   runtimeConfig: {
     public: {
@@ -23,6 +26,9 @@ const config = defineNuxtConfig({
   },
 })
 
+/**
+ * Modules
+ */
 const modules = defineNuxtConfig({
   extends: [
     envModules.typography,
@@ -32,9 +38,36 @@ const modules = defineNuxtConfig({
   modules: [
     envModules.tokens,
     envModules.studio,
+    '@nuxt/content',
     '@nuxtjs/plausible',
     '@nuxt/devtools'
   ],
+
+  content: {
+    documentDriven: true,
+    sources: {
+      site: {
+        driver: 'fs',
+        base: './site/content',
+        prefix: '/',
+      },
+      articles: {
+        driver: 'fs',
+        base: './articles/content',
+        prefix: '/articles',
+      }
+    },
+    navigation: {
+      fields: ['navTitle'],
+    },
+    highlight: {
+      theme: {
+        default: 'github-light',
+        dark: 'github-dark',
+      },
+      preload: ['json', 'js', 'ts', 'html', 'css', 'vue', 'diff', 'shell', 'markdown', 'yaml', 'bash', 'ini', 'c', 'cpp'],
+    },
+  },
 
   pinceau: {
     studio: true
@@ -47,7 +80,12 @@ const modules = defineNuxtConfig({
   },
 })
 
+/**
+ * Build
+ */
 const build = defineNuxtConfig({
+  pages: true,
+
   experimental: {
     inlineSSRStyles: false
   },
@@ -57,6 +95,9 @@ const build = defineNuxtConfig({
   },
 })
 
+/**
+ * App
+ */
 const app = defineNuxtConfig({
   app: {
     head: {

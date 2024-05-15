@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { PropType } from 'vue'
-import type { Field } from '../../types/contact'
+import type { Field } from '../../../types/contact'
 const alpine = useAppConfig().alpine
 
 const { FORMSPREE_URL } = useRuntimeConfig().public

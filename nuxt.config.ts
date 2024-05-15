@@ -1,7 +1,3 @@
-import { createResolver } from '@nuxt/kit'
-
-const { resolve } = createResolver(import.meta.url)
-
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   extends: [
@@ -15,23 +11,17 @@ export default defineNuxtConfig({
     '@nuxt/content',
   ],
 
-  components: [
-    { path: resolve('./components'), global: true },
-    { path: resolve('./components/content'), global: true },
-    { path: resolve('./components/data-entry'), global: true }
-  ],
-
   content: {
     documentDriven: true,
     navigation: {
-      fields: ['navTitle']
+      fields: ['navTitle'],
     },
     highlight: {
       theme: {
         default: 'github-light',
-        dark: 'github-dark'
+        dark: 'github-dark',
       },
-      preload: ['json', 'js', 'ts', 'html', 'css', 'vue', 'diff', 'shell', 'markdown', 'yaml', 'bash', 'ini', 'c', 'cpp']
-    }
+      preload: ['json', 'js', 'ts', 'html', 'css', 'vue', 'diff', 'shell', 'markdown', 'yaml', 'bash', 'ini', 'c', 'cpp'],
+    },
   },
 })

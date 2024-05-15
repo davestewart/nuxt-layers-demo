@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   extends: [
     './core',
-    './site',
-    './articles',
+    './layers/site',
+    './layers/articles',
   ],
 })

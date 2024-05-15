@@ -45,15 +45,16 @@ const modules = defineNuxtConfig({
 
   content: {
     documentDriven: true,
+    // note: path context is the config root (where the process is running)
     sources: {
       site: {
         driver: 'fs',
-        base: './site/content',
+        base: './layers/site/content',
         prefix: '/',
       },
       articles: {
         driver: 'fs',
-        base: './articles/content',
+        base: './layers/articles/content',
         prefix: '/articles',
       }
     },

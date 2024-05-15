@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   extends: [
     './core',
     './site',
+    './articles',
   ],
 
   pages: true,

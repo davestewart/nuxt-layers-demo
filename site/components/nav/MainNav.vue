@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+const { navigation } = useContent()
+
 const emits = defineEmits(['linkClick'])
 
 function handleClick() {
@@ -10,7 +12,7 @@ function handleClick() {
   <nav>
     <ul>
       <li
-        v-for="link of useAppConfig().links"
+        v-for="link of navigation"
         :key="link._path"
       >
         <NuxtLink

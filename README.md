@@ -53,7 +53,7 @@ Checkout individual tags to compare configurations.
 
 ## Feedback
 
-If you have any comments or questions, feel free to create an issue, or drop a [comment](http://davestwart.co.uk/blog/nuxt-layers/#hyvor-talk-view) on the original article.
+If you have any comments or questions, feel free to create an issue, or drop a [comment](http://davestewart.co.uk/blog/nuxt-layers/#hyvor-talk-view) on the original article.
 
 Cheers,<br>
 Dave
